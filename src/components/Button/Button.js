@@ -1,11 +1,15 @@
 import React from 'react';
-import './button.css';
+import { ButtonElement } from './StyledComponentConstants'
+import { ThemeProvider } from 'styled-components';
 
-const Button = ({ theme, label, ...rest }) => {
+
+const Button = ({ size, type, label, ...rest }) => {  
   return (
-    <button className={`react-button ${theme}`}  {...rest}>
-      {label}
-    </button>
+    <ThemeProvider theme={{variant: type, size}}>
+      <ButtonElement {...rest}>
+        {label}
+      </ButtonElement>
+    </ThemeProvider>
   )
 }
 
