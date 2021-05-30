@@ -9,9 +9,9 @@ const Dropdown = ({width, height, ...props}) => {
 
   const { onChange, options } = props;
 
-  const toggleIsOpen = () => {
-    if (isOpen) {
-      setIsOpen(state => false);
+  const toggleIsOpen = (isDropdownOpen) => {
+    if (isDropdownOpen) {
+      setIsOpen(false);
     }
   }
 
