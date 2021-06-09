@@ -9,10 +9,8 @@ const Dropdown = ({width, height, ...props}) => {
 
   const { onChange, options } = props;
 
-  const toggleIsOpen = (isDropdownOpen) => {
-    if (isDropdownOpen) {
+  const toggleIsOpen = () => { 
       setIsOpen(false);
-    }
   }
 
   const selectItem = (item, e) => {
@@ -23,7 +21,7 @@ const Dropdown = ({width, height, ...props}) => {
     onChange(item);
   }
 
-  useOutsideChecker(DropdownWrapperRef, isOpen, toggleIsOpen);
+  useOutsideChecker(DropdownWrapperRef, toggleIsOpen);
 
   return (
     <DropdownWrapper ref={DropdownWrapperRef} style={{width, height}}>

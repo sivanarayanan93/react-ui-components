@@ -7,6 +7,7 @@ export const ButtonElement = styled.button`
   font-size: 14px;
   vertical-align: middle;
   line-height: 1.2;
+  margin-right: 10px;
   padding: 6px 12px;
   display: inline-flex;
   align-items: center;

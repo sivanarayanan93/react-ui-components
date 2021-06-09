@@ -13,7 +13,7 @@ const Checkbox = ({value, labelName, indeterminate, ...props}) => {
       <CheckboxWrapper for={`id_${value}`}>
         <UiCheckbox {...props} type="checkbox" value={value} id={`id_${value}`} />
         {labelName}
-      </CheckboxWrapper>      
+      </CheckboxWrapper>
     </div>
   )
 }
